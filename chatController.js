@@ -1,4 +1,4 @@
 exports.home = (req, res) => {
-  res.send("It's home!");
+  res.sendFile('index.js');
   console.log("It's home!");
 };
