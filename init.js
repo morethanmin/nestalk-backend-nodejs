@@ -18,6 +18,12 @@ io.on('connection', (socket) => {
   socket.on('newMessage', ({ message }) => {
     socket.broadcast.emit('messageNotification', { message, nickname: socket.nickname || 'Anon' });
   });
+  socket.on('error', (error) => {
+    console.log(error);
+  });
+  socket.on('close', () => {
+    console.log('클라이언트 접속 해제', ip);
+  });
   socket.on('setNickname', ({ nickname }) => {
     socket.nickname = nickname;
   });
