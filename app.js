@@ -6,6 +6,7 @@ const chatRouter = require('./chatRouter');
 
 app.use(morgan('dev'));
 app.use(express.static(join(__dirname, 'tempClient')));
+app.set('view engine', 'html');
 
 app.use('/', chatRouter);
 
