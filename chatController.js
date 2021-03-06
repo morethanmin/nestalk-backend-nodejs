@@ -1,4 +1,3 @@
 exports.home = (req, res) => {
-  res.send("It's home!");
-  console.log("It's home!");
+  res.render('index.html');
 };
