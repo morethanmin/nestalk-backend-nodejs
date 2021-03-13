@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🧪 TempClient</title>
 </head>
+
 <body>
     <h1>Test Client Page</h1>
-    <h3>Console 확인</h3>
+    <h3>설명: userId, roomId 입력 => 채팅방 입장 버튼 클릭 => 메시지 입력</h3>
+    <h5>메시지는 Console에서 확인!</h5>
+    <form id="joinForm">
+        <label for="userId">userId</label>
+        <input type="text" name="userId" id="userId" placeholder="ex) 1">
+        <label for="roomId">roomId</label>
+        <input type="text" name="roomId" id="roomId" placeholder="ex) 1">
+        <button>채팅방 입장</button>
+    </form>
+    <br />
+    <form id="chatForm">
+        <label for="chat">
+            메시지
+        </label>
+        <input type="text" name="chatInput" id="chatInput">
+        <button>전송</button>
+    </form>
+
     <script src="/socket.io/socket.io.js"></script>
     <script src="./index.js"></script>
 </body>
+
 </html>
